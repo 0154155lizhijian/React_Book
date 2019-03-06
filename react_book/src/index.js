@@ -5,17 +5,31 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router,Route} from 'react-router-dom'
 import Detail from './components/detail'
 import { Provider } from 'react-redux'
-import store from './redux/store/store'
+import {createStore,compose,applyMiddleware} from 'redux';
+import  {counter} from './redux/reducers' 
+import { composeWithDevTools } from 'redux-devtools-extension';
+// import {del,add,addAsync} from './redux/actions/index'
+import thunk from 'redux-thunk'
 
-ReactDOM.render(
-    <Provider store={store}>
-        <Router>
-            <div>
-                <Route exact path="/" component={Index} />
-                <Route exact path="/detail" component={Detail} />
-            </div>
-        </Router>
-    </Provider>
-    , document.getElementById('root'));
+//引入reducer
+const store = createStore(counter,compose(applyMiddleware(thunk),composeWithDevTools()) );
+function listen() {
+    ReactDOM.render(
+        <Provider  store={store}>
+            <Index></Index>
+        </Provider>
+        // <Provider  store={store}>
+        //     <Router >
+        //         <div > 
+        //             <Route exact path="/" component={Index}/>
+        //             <Route exact path="/detail" component={Detail} />
+        //         </div>
+        //     </Router>
+        // </Provider>
+        , document.getElementById('root'));
+}
+listen()
+store.subscribe(listen)
+
 
 serviceWorker.unregister();
