@@ -16,3 +16,5 @@ subscribe（listen）进行实时更新
 
 export default connect(mapStatetoProps,actionCreate)(Index)
 数据都由props传入 rrc生成函数
+mapStatetoProps  要什么属性
+actionCreate     要什么方法

@@ -1,0 +1,37 @@
+body :global(.ant-input-lg){
+    height: 60px;
+}
+body :global(.ant-btn-lg){
+    height: 60px;
+}
+body :global(.ant-menu-horizontal){
+    line-height: 60px;
+}
+body :global(.ant-menu){
+    font-size: 16px;
+}
+body :global(.ant-menu-item ){
+    padding-left: 33px;
+    padding-right: 33px;
+}
+/* body :global(.ant-menu){
+    font-size: 16px;
+} */
+
+.container{
+    width: 1000px;
+    height: 1500px;
+    background-color:purple;
+    border-top-style: none;
+    border: 1px inset darkgray;
+}
+
+.search{
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background-color: yellow;
+    padding-bottom: 50px;
+    width: 1000px;
+}
+
