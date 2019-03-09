@@ -9,7 +9,7 @@ export default class Search extends Component {
         <div className="search">
         <Search
           placeholder="搜索您要的图书"
-          enterButton="Search"
+          enterButton="搜素"
           size="large"
           onSearch={value => console.log(value)}
         />

@@ -1,0 +1,44 @@
+const MenuList =[
+    {
+        title:'首页',
+        key:'/shouye',
+    },
+    {
+        title:'玄幻',
+        key:'/xuanhuan',
+    },
+    {
+        title:'仙侠',
+        key:'/xianxia',
+    },
+    {
+        title:'科幻',
+        key:'/kehuan',
+    },
+    {
+        title:'都市',
+        key:'/dushi',
+    },
+    {
+        title:'军事',
+        key:'/junshi',
+    },
+    {
+        title:'游戏',
+        key:'/youxi',
+    },
+    {
+        title:'奇幻',
+        key:'/qihuan',
+    },
+    {
+        title:'体育',
+        key:'/tiyu',
+    },
+    {
+        title:'列表',
+        key:'/liebiao',
+    },
+]
+
+export default MenuList
