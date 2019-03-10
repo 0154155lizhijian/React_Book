@@ -22,13 +22,15 @@ body :global(.ant-menu-item ){
     font-size: 16px;
 } */
 
-
 .container{
-    width: 1000px;
+    width: 1002px;
     height: 1500px;
     /* background-color:purple; */
     border-top-style: none;
     border: 1px solid darkgray;
+    box-sizing: border-box;
+
+    overflow: hidden;
 }
 
 .search{
@@ -38,10 +40,10 @@ body :global(.ant-menu-item ){
     background-color: yellow;
     padding-bottom: 50px;
     width: 1000px;
-    border: 1px solid darkgray;
+    border-right: 1px solid darkgray;
 }
 .navigationContainer{
-    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
 }
 /* 轮播图 */
 .ant-carousel .slick-slide {
@@ -66,10 +68,10 @@ body :global(.ant-menu-item ){
     margin: 0 auto;
   }
   .bookLists{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
+    /* display: flex;
+    flex-wrap: wrap; */
+    margin: 0,25px,0,25px;
+    /* justify-content: flex-start; */
   }
 
   .book{
@@ -98,4 +100,40 @@ body :global(.ant-menu-item ){
     text-align: center;
     overflow: hidden;
   }
+  .more{
+    /* font-size: 30px;
+    text-align: center;
+    writing-mode: vertical-lr; */
+    margin-top: 40px;
+    background-color: yellow;
+    height: 310px;
+    width: 200px;
+    color: darkgray;
+    transition: color .25s;
+    position: relative;
+  }
+  .more::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    margin-left: -40px;
+    margin-top: -5px;
+    border-top: 10px solid;
+  }
+  .more::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 80px;
+    margin-left: -5px;
+    margin-top: -40px;
+    border-left: 10px solid;
+   }
+   .more:hover {
+    color: #1890ff;
+  }
+  
 
